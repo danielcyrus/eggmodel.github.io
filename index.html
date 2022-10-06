@@ -141,7 +141,7 @@
 
 <div class="py-vh-5 w-100 overflow-hidden" id="services">
   <div class="container canvas">
-  
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
       <canvas id="chartcanvas" width="500" height="400" style="display: inline-block;"></canvas>
    
       <div id="d3dcanvas"></div>
@@ -501,7 +501,7 @@ const geometry1 = new THREE.BoxGeometry(1, 1, 1);
   const loader = new THREE.TextureLoader();
   
   const material1 = new THREE.MeshBasicMaterial({
-    map: loader.load('http://localhost/img/heartbit.jpg'),
+    map: loader.load('img/egg.png'),
   });
   const cube = new THREE.Mesh(geometry1, material1);
   scene.add(cube);
