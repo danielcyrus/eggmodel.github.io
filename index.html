@@ -520,7 +520,7 @@ const geometry1 = new THREE.BoxGeometry(3, 2, 1);
         sphere.scale.x = radius;
         sphere.scale.y = radius;
 	var deg=(slider.value * Math.PI) /180;
-        cube.rotate.y= deg;
+        cube.rotation.y= deg;
 	renderer.render( scene, camera );
      
         bitTimer();
