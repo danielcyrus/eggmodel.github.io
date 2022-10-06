@@ -501,7 +501,7 @@ const geometry1 = new THREE.BoxGeometry(1, 1, 1);
   const loader = new THREE.TextureLoader();
   
   const material1 = new THREE.MeshBasicMaterial({
-    map: loader.load('http://localhost/img/heartbit.jpg'),
+    map: loader.load('img/heartbit.jpg'),
   });
   const cube = new THREE.Mesh(geometry1, material1);
   scene.add(cube);
