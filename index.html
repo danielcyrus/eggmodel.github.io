@@ -514,6 +514,18 @@ const geometry1 = new THREE.BoxGeometry(3, 2, 0.01);
   const cube = new THREE.Mesh(geometry1, material1);
   scene.add(cube);
 ////////////////////////////////////
+///////////////////////////////////
+const geometry1 = new THREE.BoxGeometry(0.01, 2, 3);
+
+  const loader = new THREE.TextureLoader();
+  
+  const material1 = new THREE.MeshBasicMaterial({
+    map: loader.load('img/bluecircle.png'),
+  });
+  const cube = new THREE.Mesh(geometry1, material1);
+  scene.add(cube);
+////////////////////////////////////
+	
 			camera.position.z = 3;
  
 			function animate() {
@@ -525,7 +537,7 @@ const geometry1 = new THREE.BoxGeometry(3, 2, 0.01);
 	var deg=(slider.value * Math.PI) /180;
         cube.rotation.y= deg;
 	renderer.render( scene, camera );
-     if(start)
+     if(start==true)
         bitTimer();
 			};
 
