@@ -517,15 +517,15 @@ const geometry1 = new THREE.BoxGeometry(3, 2, 0.01);
   scene.add(cube);
 ////////////////////////////////////
 ///////////////////////////////////
-const geometry1 = new THREE.BoxGeometry(0.01, 2, 3);
+const geometry2 = new THREE.BoxGeometry(0.01, 2, 3);
 
-  const loader = new THREE.TextureLoader();
+  const loader2 = new THREE.TextureLoader();
   
-  const material1 = new THREE.MeshBasicMaterial({
-    map: loader.load('img/bluecircle.png'),
+  const material2 = new THREE.MeshBasicMaterial({
+    map: loader2.load('img/bluecircle.png'),
   });
-  const cube = new THREE.Mesh(geometry1, material1);
-  scene.add(cube);
+  const cube2 = new THREE.Mesh(geometry2, material2);
+  scene.add(cube2);
 ////////////////////////////////////
 	
 			camera.position.z = 3;
