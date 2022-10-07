@@ -142,8 +142,8 @@
 <div class="py-vh-5 w-100 overflow-hidden" id="services">
   <div class="container canvas">
 	  <div>
-  <input type="range" min="0" max="180" value="0" class="slider" id="myRange">
-	  <button type="button">Start</button>
+  <input type="range" min="0" max="180" value="0" class="slider" id="myRange" style="float:right">
+	  <button type="button" onclick="startFunction()">Start</button>
 		  </div>
 	  <div>
       <canvas id="chartcanvas" width="500" height="400" style="display: inline-block;"></canvas>
@@ -246,6 +246,7 @@
  </script>
 
  <script>
+   var start=false;
   let scrollpos = window.scrollY
   const header = document.querySelector(".navbar")
   const header_height = header.offsetHeight
@@ -476,8 +477,10 @@ function bitTimer() {
      
    
   drawBar(bit);
-
+function startFunction(){
+	start=true;
 }
+	  
   </script>
 
 <script src="js/three.js"></script>
@@ -501,7 +504,7 @@ function bitTimer() {
 			scene.add( sphere );
 ///////////////////////////////////
 var slider = document.getElementById("myRange");
-const geometry1 = new THREE.BoxGeometry(3, 2, 0.1);
+const geometry1 = new THREE.BoxGeometry(3, 2, 0.01);
 
   const loader = new THREE.TextureLoader();
   
@@ -522,7 +525,7 @@ const geometry1 = new THREE.BoxGeometry(3, 2, 0.1);
 	var deg=(slider.value * Math.PI) /180;
         cube.rotation.y= deg;
 	renderer.render( scene, camera );
-     
+     if(start)
         bitTimer();
 			};
 
