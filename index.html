@@ -143,7 +143,7 @@
   <div class="container canvas">
 	  <div>
   <input type="range" min="0" max="180" value="0" class="slider" id="myRange" style="float:right">
-	  <button type="button" onclick="startFunction()">Start</button>
+	  <button type="button">Start</button>
 		  </div>
 	  <div>
       <canvas id="chartcanvas" width="500" height="400" style="display: inline-block;"></canvas>
@@ -246,13 +246,13 @@
  </script>
 
  <script>
-   var start=false;
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
+ 
+  let scrollpos = window.scrollY;
+  const header = document.querySelector(".navbar");
+  const header_height = header.offsetHeight;
 
-  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
+  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
 
   window.addEventListener('scroll', function() {
     scrollpos = window.scrollY;
