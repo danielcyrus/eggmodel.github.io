@@ -445,7 +445,7 @@ function drawBar(bit){
   ctx3.lineWidth = 3;
      ctx3.moveTo(i, 105);
      ctx3.lineTo(i+10, 105);
-     if(i==bit || i==bit+10) ctx3.strokeStyle = "#ffffff";
+     if(i==bit*10 || i==(bit*10)+10) ctx3.strokeStyle = "#ffffff";
     else ctx3.strokeStyle = "#ff0000";
       ctx3.stroke();
       ctx3.closePath();
