@@ -458,7 +458,7 @@ function drawBar(bit){
 var check=0;
 var bit=-180;
 function bitTimer() {
-  if(bit>=320)bit=-180;
+  if(bit>=1)bit=-1;
     bit+=0.1;
   if(radius>=1)
       check=1
@@ -477,9 +477,7 @@ function bitTimer() {
      
    
   drawBar(bit);
-function startFunction(){
-	start=true;
-}
+
 	  
   </script>
 
@@ -538,8 +536,9 @@ const geometry2 = new THREE.BoxGeometry(0.01, 2, 3);
         sphere.scale.y = radius;
 	var deg=(slider.value * Math.PI) /180;
         cube.rotation.y= deg;
+        cube2.rotation.y= deg;
 	renderer.render( scene, camera );
-     if(start==true)
+     
         bitTimer();
 			};
 
