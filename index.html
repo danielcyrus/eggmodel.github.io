@@ -508,6 +508,7 @@ function bitTimer() {
 			scene.add( sphere );
 ///////////////////////////////////
 var slider = document.getElementById("myRange");
+var slider2 = document.getElementById("myRange1");
 const geometry1 = new THREE.BoxGeometry(3, 2, 0.01);
 
   const loader = new THREE.TextureLoader();
@@ -541,6 +542,11 @@ const geometry2 = new THREE.BoxGeometry(0.01, 2, 3);
 	var deg=(slider.value * Math.PI) /180;
         cube.rotation.y= deg;
         cube2.rotation.y= deg;
+        
+	var deg1=(slider2.value * Math.PI) /180;
+        cube.rotation.x= deg1;
+        cube2.rotation.x= deg1;
+				
 	renderer.render( scene, camera );
      
         bitTimer();
