@@ -144,8 +144,10 @@
 	  <div>
  
 		 
-	           <input type="button" value="Start" onclick="startFunction()">
+	           <input type="button" value="Start" onclick="startFunction(this)">
 		   <input type="checkbox" value="Repeat"> Repeat
+		    <input type="checkbox" value="Lead1" checked> Show Lead I
+		    <input type="checkbox" value="Lead2" checked> Show Lead II
 		    <input type="range" min="0" max="180" value="0" class="slider" id="speed">
 		   <input type="range" min="0" max="180" value="0" class="slider" id="myRange" style="float:right">
 		  </div>
@@ -271,7 +273,7 @@
 
 <script>
   var radius = 1;
-
+  var _start=0;
 function drawCircle(){
   
   ctx1.globalAlpha =0.4; // set global alpha
@@ -549,8 +551,7 @@ const geometry2 = new THREE.BoxGeometry(0.01, 2, 3);
         
 				requestAnimationFrame( animate );
       
-        sphere.scale.x = radius;
-        sphere.scale.y = radius;
+       
 	var deg=(slider.value * Math.PI) /180;
         cube.rotation.y= deg;
         cube2.rotation.y= deg;
@@ -560,15 +561,28 @@ const geometry2 = new THREE.BoxGeometry(0.01, 2, 3);
         cube2.rotation.x= deg1;
 				
 	renderer.render( scene, camera );
-     
+				if(_start==1)
+				{
+      sphere.scale.x = radius;
+        sphere.scale.y = radius;
+				}
         bitTimer();
 			};
 
 			animate();
 container.appendChild( renderer.domElement );
 	
-	function startFunction(){
-		alert('hello');
+	function startFunction(btn){
+		if(btn.innerHTML=="Start")
+		{
+			btn.innerHTML="Stop;
+			_start=1;
+		}
+		else
+		{
+			btn.innerHTML="Start;
+			_start=0;
+		}
 	}
 </script>
   </body>
