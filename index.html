@@ -576,14 +576,14 @@ if(_start==1)
 container.appendChild( renderer.domElement );
 	
 	function startFunction(btn){
-		if(btn.innerHTML=="Start")
+		if(btn.value=="Start")
 		{
-			btn.innerHTML="Stop";
+			btn.value="Stop";
 			_start=1;
 		}
 		else
 		{
-			btn.innerHTML="Start";
+			btn.value="Start";
 			_start=0;
 		}
 	}
