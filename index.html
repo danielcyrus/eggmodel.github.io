@@ -455,6 +455,17 @@ function drawBar(bit){
       ctx3.stroke();
       ctx3.closePath();
   }
+	 for(i=-180;i<320;i+=10){
+    
+    ctx3.beginPath();
+  ctx3.lineWidth = 3;
+     ctx3.moveTo(i, 103);
+     ctx3.lineTo(i+10, 103);
+     if(i==bit*100 || i==(bit*100)+10) ctx3.strokeStyle = "#ffffff";
+    else ctx3.strokeStyle = "#0000ff";
+      ctx3.stroke();
+      ctx3.closePath();
+  }
   
 }
   </script>
