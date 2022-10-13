@@ -144,15 +144,16 @@
 	  <div>
  
 		 
-	           <input type="button" value="Start">
-		   <input type="checkbox" value="Repeat">
+	           <input type="button" value="Start" onclick="startFunction()">
+		   <input type="checkbox" value="Repeat"> Repeat
+		    <input type="range" min="0" max="180" value="0" class="slider" id="speed">
 		   <input type="range" min="0" max="180" value="0" class="slider" id="myRange" style="float:right">
 		  </div>
 	  <div>
       <canvas id="chartcanvas" width="500" height="400" style="display: inline-block;"></canvas>
    
       <div id="d3dcanvas"></div>
-		  <input type="range" min="0" max="180" value="0" class="slider" orient="vertical" id="myRange1" style="float:right;writing-mode: bt-lr;-webkit-appearance: slider-vertical;top:-50%;">
+		  <input type="range" min="0" max="180" value="0" class="slider" orient="vertical" id="myRange1" style="float:right;writing-mode: bt-lr;-webkit-appearance: slider-vertical;top:50%;">
 		  </div>
 <style>
    #d3dcanvas {
@@ -554,6 +555,10 @@ const geometry2 = new THREE.BoxGeometry(0.01, 2, 3);
 
 			animate();
 container.appendChild( renderer.domElement );
+	
+	function startFunction(){
+		alert('hello');
+	}
 </script>
   </body>
 </html>
